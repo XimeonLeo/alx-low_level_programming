@@ -1,17 +1,17 @@
 #include "main.h"
 /**
   * _abs - Entry point
-  * @int: intergers are considered
+  * @i: intergers are considered
   *Return: absolute value of a number
  */
 
-int _abs(int c)
+int _abs(int i)
 {
-	if (c < 0)
+	if (i < 0)
 	{
 		int abs;
 
-		abs = c * -1;
+		abs = i * -1;
 		return (abs);
 	}
 	return (0);
