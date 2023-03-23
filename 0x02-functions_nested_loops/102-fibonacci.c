@@ -18,7 +18,7 @@ int main(void)
 
 	for (a = 1; a <= 50; a++)
 	{
-		if (b < 12586269025)
+		if (b < 20365011074)
 		{
 			printf("%ld, ", b);
 		}
