@@ -2,7 +2,7 @@
 
 /**
   *print_line - to print straight lines
-  *
+  *@n: integer to be computed
   *return: void for success
   */
 
