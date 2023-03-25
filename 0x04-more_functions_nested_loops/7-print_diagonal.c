@@ -2,7 +2,7 @@
 
 /**
   *print_diagonal - entry point
-  *
+  *@n: value to be computed
   *return: void dor success
   */
 
