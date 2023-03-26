@@ -20,7 +20,7 @@ int main(void)
 		{
 			if (i == 100)
 			{
-				printf("Buzz");
+				printf("Buzz.");
 			}
 			else
 			{
@@ -36,7 +36,7 @@ int main(void)
 			printf("%d ", i);
 		}
 	}
-	printf("\n");
+	/*printf("\n");*/
 
 	return (0);
 }
