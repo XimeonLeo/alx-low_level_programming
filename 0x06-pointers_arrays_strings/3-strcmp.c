@@ -11,17 +11,12 @@
 
 int _strcmp(char *s1, char *s2)
 {
-	int length, length_s1, length_s2;
+	int length = 0;
 
-	for (length = 0; s1[length]; length++)
+	while (s1[length] == s2[length] && s1[length] != '\0')
 	{
-		length_s1++;
+		length++;
 	}
 
-	for (length = 0; s2[length]; length++)
-	{
-		length_s2++;
-	}
-
-	return (*s1 - *s2);
+	return (s1[length] - s2[length]);
 }
