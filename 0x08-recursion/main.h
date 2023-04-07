@@ -11,5 +11,6 @@ int is_prime_number(int n);
 int is_palindrome(char *s);
 int wildcmp(char *s1, char *s2);
 int _putchar(char c);
+int assist_func(int val, int dgt);
 
-#endif
+#endif /*MAIN_H*/
