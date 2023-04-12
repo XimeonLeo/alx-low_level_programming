@@ -12,7 +12,7 @@
 
 int main(int argc, char *argv[])
 {
-	int index, dgt, sum = 0;
+	int index, j, dgt, sum = 0;
 
 	if (argc < 2)
 	{
@@ -23,7 +23,8 @@ int main(int argc, char *argv[])
 	{
 		for (index = 1; index < argc; index++)
 		{
-			if (*argv[index] < '0' || *argv[index] > '9')
+			for (j = 0; argv[index][j] != '\0'; j++)
+			if (argv[index][j] < '0' || argv[index][j] > '9')
 			{
 				printf("Error\n");
 
