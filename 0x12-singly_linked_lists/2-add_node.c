@@ -4,7 +4,7 @@
  * add_node - appends a new node to the begining of a list
  *
  * @head: a pointee the new node
- * @s: the sring in the new node
+ * @str: the sring in the new node
  *
  * Return: the address to the new node
  */
