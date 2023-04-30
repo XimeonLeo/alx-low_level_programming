@@ -7,16 +7,16 @@
  * Return: elements of nodes
  */
 
-
 size_t print_listint(const listint_t *h)
 {
-	size_t node_elem = 0;
+	size_t node_elems = 0;
 
 	while (h)
 	{
+		node_elems++;
 		printf("%d\n", h->n);
 		h = h->next;
-		node_elem++;
 	}
-	return (node_elem);
+
+	return (node_elems);
 }
