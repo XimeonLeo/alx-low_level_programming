@@ -1,4 +1,5 @@
 #include "lists.h"
+#include <stdio.h>
 
 /**
  * print_listint - return the number of nodes found
@@ -9,13 +10,13 @@
 
 size_t print_listint(const listint_t *h)
 {
-	unsigned int node_elems = 0;
+	size_t node_elems = 0;
 
 	while (h)
 	{
+		node_elems++;
 		printf("%d\n", h->n);
 		h = h->next;
-		node_elems++;
 	}
 
 	return (node_elems);
