@@ -1,22 +1,25 @@
 #include "main.h"
 
 /**
- * set_bit - changes the bit at a particular index using not
+ * get_bit - locates and return the bit found at a particular index
  *
- * @n: a pointer to the number to be tempared
- * @index: the position to change
+ * @n: the number to be considered
+ * @index: the position to be located
  *
- * Return: a new number
+ * Return: 1 or -1
  */
 
-int set_bit(unsigned long int *n, unsigned int index)
+int get_bit(unsigned long int n, unsigned int index)
 {
 	if (index >= (sizeof(unsigned long int) * 8))
 	{
 		return (-1);
 	}
 
-	*n ^= (1 << index);
+	if ((n & (1 << index)) == 0)
+	{
+		return (0);
+	}
 
 	return (1);
 }
