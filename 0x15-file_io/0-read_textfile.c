@@ -3,9 +3,9 @@
 /**
  * read_textfile - it opens, read, write and close a
  *		file into STDOUT
- * @filename: a pointer to the name of the file to be 
+ * @filename: a pointer to the name of the file to be
  *		written to STDOUT
- * @letter: the length to be read and written
+ * @letters: the length to be read and written
  *
  * Return: 0 if the file could not be accessed.
  *	0 if the filename is NULL.
@@ -32,14 +32,14 @@ ssize_t read_textfile(const char *filename, size_t letters)
 
 	op = open(filename, O_RDONLY);
 	rd = read(op, buf, letters);
-	wt = write(STDOUT_FILENO, buf, rd);
+	wt = write(1, buf, rd);
 
 	if (wt != rd || op == -1 || rd == -1 || wt == -1)
 	{
 		free(buf);
 		return (0);
 	}
-	free (buf);
+	free(buf);
 	close(op);
 
 	return (wt);
