@@ -1,5 +1,12 @@
 #include "hash_tables.h"
-
+/**
+ * hash_table_create - a function that creates a new Hash table
+ *
+ * @size: the size of the table to be created
+ *
+ * Return: the address of the new table created
+ *
+ */
 hash_table_t *hash_table_create(unsigned long int size)
 {
 	hash_table_t *myTable = NULL;
