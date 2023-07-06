@@ -21,7 +21,7 @@ hash_table_t *hash_table_create(unsigned long int size)
 	if (!myTable->array)
 		return (NULL);
 
-	while (myTable->array[idx])
+	while (idx < size)
 	{
 		myTable->array[idx] = NULL;
 		idx++;
