@@ -17,15 +17,15 @@ char *hash_table_get(const hash_table_t *ht, const char *key)
 		return (NULL);
 	/* Getting the index where the key is */
 	index = key_index((const unsigned char *)key, ht->size);
-	if (!ht->array[index])
-		return (NULL);
+
 	/* A condition where the key is the only one in that index */
-	if (ht->array[index] && !ht->array[index]->next)
+	if (ht->array[index] && !(ht->array[index]->next))
 	{
 		if (*(ht->array[index]->key) == *key)
 		{
 			return (ht->array[index]->value);
 		}
+		return (NULL);
 	}
 	/* In a case of collision */
 	while (ht->array[index]->next)
