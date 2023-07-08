@@ -19,16 +19,7 @@ char *hash_table_get(const hash_table_t *ht, const char *key)
 	index = key_index((const unsigned char *)key, ht->size);
 
 	/* A condition where the key is the only one in that index */
-	if (ht->array[index] && !(ht->array[index]->next))
-	{
-		if (*(ht->array[index]->key) == *key)
-		{
-			return (ht->array[index]->value);
-		}
-		return (NULL);
-	}
-	/* In a case of collision */
-	while (ht->array[index]->next)
+	while (ht->array[index])
 	{
 		if (*(ht->array[index]->key) == *key)
 			return (ht->array[index]->value);
