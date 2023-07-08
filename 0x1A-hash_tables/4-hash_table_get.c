@@ -11,14 +11,15 @@
  */
 char *hash_table_get(const hash_table_t *ht, const char *key)
 {
-	unsigned long int index = 0, i = 0;
-
+	unsigned long int index = 0;
+	/* Checks if the table or key passed is (null)*/
 	if (!ht || !key)
 		return (NULL);
-
+	/* Getting the index where the key is */
 	index = key_index((const unsigned char *)key, ht->size);
 	if (!ht->array[index])
 		return (NULL);
+	/* A condition where the key is the only one in that index */
 	if (ht->array[index] && !ht->array[index]->next)
 	{
 		if (*(ht->array[index]->key) == *key)
@@ -26,11 +27,12 @@ char *hash_table_get(const hash_table_t *ht, const char *key)
 			return (ht->array[index]->value);
 		}
 	}
+	/* In a case of collision */
 	while (ht->array[index]->next)
 	{
 		if (*(ht->array[index]->key) == *key)
 			return (ht->array[index]->value);
-		i++;
+		ht->array[index] = ht->array[index]->next;
 	}
 	return (NULL);
 }
