@@ -1,2 +1,1 @@
-# 0x1C. C - Makefiles
-# C
+# 0x1B.c
