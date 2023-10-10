@@ -1,5 +1,12 @@
 #include "search_algos.h"
 
+/**
+ * printx - an helper functjon that prints out the array
+ *
+ * @array: the array to print
+ * @left: the begining of where to print from
+ * @right: where to stop printing
+ */
 void printx(int *array, size_t left, size_t right)
 {
 	char *comma = NULL;
@@ -24,7 +31,7 @@ void printx(int *array, size_t left, size_t right)
  * @value: the value to search for in the array
  *
  * Return: the index where value is found,
- * 	-1 if array is NULL or if value is not found
+ *	-1 if array is NULL or if value is not found
  */
 
 int binary_search(int *array, size_t size, int value)
@@ -46,7 +53,8 @@ int binary_search(int *array, size_t size, int value)
 				right = mid - 1;
 			printx(array, left, right);
 		}
-		/* If it reaches here, right must be equal to left
+		/**
+		 * If it reaches here, right must be equal to left
 		 * we have to check if the last element is what
 		 * we are looking for
 		 */
